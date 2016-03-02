@@ -66,8 +66,8 @@ describe("Test Assertions", function()
   end)
 
   it("Checks same() assertion to handle non-keyed tables", function()
-    local env1 = { 'dev', 'test', 'prod' }
-    local env2 = { 'dev', 'test', 'prod' }
+    local env1 = { 'staging', 'dev', 'test', 'prod' }
+    local env2 = { 'dev', 'test', 'prod', 'staging' }
 
     assert.same(env1, env2)
   end)
