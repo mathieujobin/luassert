@@ -62,6 +62,14 @@ describe("Test Assertions", function()
     assert.same(t1, t2)
     assert.same(t1, t3)
     assert.same(t1, t3)
+    assert.same(t2, t3)
+  end)
+
+  it("Checks same() assertion to handle non-keyed tables", function()
+    local env1 = { 'dev', 'test', 'prod' }
+    local env2 = { 'dev', 'test', 'prod' }
+
+    assert.same(env1, env2)
   end)
 
   it("Checks same() assertion to handle recursive tables that don't match", function()
